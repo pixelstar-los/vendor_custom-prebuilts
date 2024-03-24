@@ -1,10 +1,5 @@
 # Inherit from telephony config
-$(call inherit-product, vendor/pixel-additional/products/telephony.mk)
-
-ifneq ($(TARGET_SHIP_GMS),false)
-# Inherit from apex config
-$(call inherit-product, vendor/mainline_modules/config.mk)
-endif
+$(call inherit-product, vendor/pixys-prebuilts/products/telephony.mk)
 
 # Inherit from gms config
-$(call inherit-product, vendor/pixel-additional/products/gms.mk)
+$(call inherit-product, vendor/pixys-prebuilts/products/gms.mk)

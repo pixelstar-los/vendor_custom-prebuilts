@@ -34,14 +34,13 @@ PRODUCT_PACKAGES += \
     lily_experience
 endif
 
-ifneq ($(TARGET_SHIP_GMS),false)
 # Include TurboAdapter without Google Battery support
-ifeq ($(TARGET_NOT_SUPPORTS_GOOGLE_BATTERY),true)
+ifeq ($(TARGET_SUPPORTS_GOOGLE_BATTERY),false)
 PRODUCT_PACKAGES += \
     TurboAdapter_NoBatt
 
 PRODUCT_COPY_FILES += \
-    vendor/pixel-additional/common/proprietary/system_ext/lib64/libpowerstatshaldataprovider.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libpowerstatshaldataprovider.so
+    vendor/pixys-prebuilts/common/proprietary/system_ext/lib64/libpowerstatshaldataprovider.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libpowerstatshaldataprovider.so
 
 PRODUCT_PACKAGES += \
     LibPowerStatsSymLink_NoBatt
@@ -52,5 +51,4 @@ endif
 ifneq ($(TARGET_GBOARD_KEY_HEIGHT),)
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.height_ratio=$(TARGET_GBOARD_KEY_HEIGHT)
-endif
 endif

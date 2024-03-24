@@ -14,44 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(TARGET_SHIP_GMS),false)
 ifeq ($(TARGET_INCLUDE_CARRIER_SERVICES), true)
 PRODUCT_PACKAGES += \
     CarrierServices
-endif
-
-ifeq ($(TARGET_INCLUDE_PIXEL_IMS), true)
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/pixel-additional/common
-
-PRODUCT_PACKAGES += \
-    PixelTelephonyOverlayAdditional
-
-PRODUCT_COPY_FILES += \
-    vendor/pixel-additional/common/proprietary/product/etc/permissions/com.android.sdm.plugins.diagmon.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.sdm.plugins.diagmon.xml \
-    vendor/pixel-additional/common/proprietary/product/etc/sysconfig/allowlist_com.shannon.imsservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.shannon.imsservice.xml \
-    vendor/pixel-additional/common/proprietary/system_ext/etc/permissions/com.shannon.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.shannon.imsservice.xml \
-    vendor/pixel-additional/common/proprietary/system_ext/etc/permissions/com.shannon.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.shannon.rcsservice.xml \
-    vendor/pixel-additional/common/proprietary/system_ext/lib64/libimsmedia.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsmedia.so \
-    vendor/pixel-additional/common/proprietary/system_ext/lib64/libmediaadaptor.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmediaadaptor.so
-
-PRODUCT_PACKAGES += \
-    DiagMon \
-    ImsMediaService \
-    ShannonIms \
-    ShannonRcs
-endif
-
-ifeq ($(TARGET_INCLUDE_PIXEL_EUICC), true)
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/pixel-additional/common
-
-PRODUCT_COPY_FILES += \
-    vendor/pixel-additional/common/proprietary/system_ext/etc/permissions/com.google.euiccpixel.permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.euiccpixel.permissions.xml \
-    vendor/pixel-additional/common/proprietary/system_ext/etc/permissions/com.google.euiccpixel.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.euiccpixel.xml
-
-PRODUCT_PACKAGES += \
-    EuiccGoogle
 endif
 
 ifeq ($(TARGET_INCLUDE_CARRIER_SETTINGS), true)
@@ -66,6 +31,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.com.android.dataroaming=false
 
-$(call inherit-product, vendor/pixel-additional/common/common-vendor.mk)
-endif
+$(call inherit-product, vendor/pixys-prebuilts/common/common-vendor.mk)
 endif
