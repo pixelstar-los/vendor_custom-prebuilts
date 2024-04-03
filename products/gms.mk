@@ -52,3 +52,14 @@ ifneq ($(TARGET_GBOARD_KEY_HEIGHT),)
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.height_ratio=$(TARGET_GBOARD_KEY_HEIGHT)
 endif
+
+# clock plugins
+PRODUCT_PACKAGES += \
+    SystemUIClocks-BigNum \
+    SystemUIClocks-Calligraphy \
+    SystemUIClocks-Flex \
+    SystemUIClocks-Growth \
+    SystemUIClocks-Inflate \
+    SystemUIClocks-Metro \
+    SystemUIClocks-NumOverlap \
+    SystemUIClocks-Weather

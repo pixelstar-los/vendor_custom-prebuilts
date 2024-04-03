@@ -40,3 +40,4 @@ write_footers
 
 # Exclusions
 sed -i '/libpowerstatshaldataprovider/d' "${ANDROID_ROOT}/vendor/pixys-prebuilts/common/common-vendor.mk"
+sed -i '/SystemUIClocks/d' "${ANDROID_ROOT}/vendor/pixys-prebuilts/common/common-vendor.mk"
