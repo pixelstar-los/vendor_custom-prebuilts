@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
 endif
 
 # Include TurboAdapter without Google Battery support
-ifeq ($(TARGET_SUPPORTS_GOOGLE_BATTERY),false)
 PRODUCT_PACKAGES += \
     TurboAdapter_NoBatt
 
@@ -44,7 +43,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     LibPowerStatsSymLink_NoBatt
-endif
 
 # Resize GBoard ime key height to TARGET_GBOARD_KEY_HEIGHT
 # Value must be float e.g. 1.2
