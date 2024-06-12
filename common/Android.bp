@@ -8,9 +8,9 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "CarrierSettings",
+	name: "CarrierSettings_signed_45.0.591154042",
 	owner: "pixys-prebuilts",
-	apk: "proprietary/product/priv-app/CarrierSettings/CarrierSettings.apk",
+	apk: "proprietary/product/priv-app/CarrierSettings_signed_45.0.591154042/CarrierSettings_signed_45.0.591154042.apk",
 	overrides: ["CarrierConfig"],
 	preprocessed: true,
 	presigned: true,
