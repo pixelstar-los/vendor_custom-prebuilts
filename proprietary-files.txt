@@ -345,6 +345,13 @@ product/etc/CarrierSettings/virgintelco_es.pb
 product/etc/CarrierSettings/yesss_at.pb
 product/etc/CarrierSettings/yettel_bg.pb
 
+# Carrier
+product/priv-app/CarrierLocation/CarrierLocation.apk;PRESIGNED
+product/priv-app/CarrierMetrics/CarrierMetrics.apk;PRESIGNED
+product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
+system_ext/priv-app/CarrierSetup/CarrierSetup.apk;PRESIGNED
+product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
+
 # Turbo
 system_ext/lib64/libpowerstatshaldataprovider.so
 

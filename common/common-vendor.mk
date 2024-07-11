@@ -350,4 +350,9 @@ PRODUCT_COPY_FILES += \
     vendor/pixys-prebuilts/common/proprietary/product/etc/CarrierSettings/zeop_re.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/zeop_re.pb \
 
 PRODUCT_PACKAGES += \
+    CarrierLocation \
+    CarrierMetrics \
     CarrierSettings_signed_45.0.591154042 \
+    CarrierWifi \
+    WfcActivation \
+    CarrierSetup \
