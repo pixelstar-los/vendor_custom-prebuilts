@@ -9,7 +9,7 @@
 set -e
 
 DEVICE=common
-VENDOR=pixys-prebuilts
+VENDOR=custom-prebuilts
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -30,8 +30,8 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true
 # Warning headers and guards
 write_headers "arm64"
 sed -i 's|TARGET_DEVICE|TARGET_ARCH|g' "${ANDROIDMK}"
-sed -i 's|vendor/pixys-prebuilts/|vendor/pixys-prebuilts/common|g' "${PRODUCTMK}"
-sed -i 's|device/pixys-prebuilts//setup-makefiles.sh|vendor/pixys-prebuilts/setup-makefiles.sh|g' "${ANDROIDBP}" "${ANDROIDMK}" "${BOARDMK}" "${PRODUCTMK}"
+sed -i 's|vendor/custom-prebuilts/|vendor/custom-prebuilts/common|g' "${PRODUCTMK}"
+sed -i 's|device/custom-prebuilts//setup-makefiles.sh|vendor/custom-prebuilts/setup-makefiles.sh|g' "${ANDROIDBP}" "${ANDROIDMK}" "${BOARDMK}" "${PRODUCTMK}"
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
@@ -39,5 +39,5 @@ write_makefiles "${MY_DIR}/proprietary-files.txt" true
 write_footers
 
 # Exclusions
-sed -i '/libpowerstatshaldataprovider/d' "${ANDROID_ROOT}/vendor/pixys-prebuilts/common/common-vendor.mk"
-sed -i '/SystemUIClocks/d' "${ANDROID_ROOT}/vendor/pixys-prebuilts/common/common-vendor.mk"
+sed -i '/libpowerstatshaldataprovider/d' "${ANDROID_ROOT}/vendor/custom-prebuilts/common/common-vendor.mk"
+sed -i '/SystemUIClocks/d' "${ANDROID_ROOT}/vendor/custom-prebuilts/common/common-vendor.mk"

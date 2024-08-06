@@ -1,4 +1,4 @@
-# vendor_pixys-prebuilts
+# vendor_custom-prebuilts
 Additional Pixel stuffs
 
 ## Note for including CarrierSettings

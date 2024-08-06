@@ -1,9 +1,9 @@
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/pixys-prebuilts/common
+    vendor/custom-prebuilts/common
 
 # Inherit from telephony config
-$(call inherit-product, vendor/pixys-prebuilts/products/telephony.mk)
+$(call inherit-product, vendor/custom-prebuilts/products/telephony.mk)
 
 # Inherit from gms config
-$(call inherit-product, vendor/pixys-prebuilts/products/gms.mk)
+$(call inherit-product, vendor/custom-prebuilts/products/gms.mk)
 

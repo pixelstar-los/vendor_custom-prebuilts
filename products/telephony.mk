@@ -26,5 +26,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.com.android.dataroaming=false
 
-$(call inherit-product, vendor/pixys-prebuilts/common/common-vendor.mk)
+$(call inherit-product, vendor/custom-prebuilts/common/common-vendor.mk)
 endif

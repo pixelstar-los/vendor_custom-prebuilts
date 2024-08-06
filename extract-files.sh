@@ -9,7 +9,7 @@
 set -e
 
 DEVICE=common
-VENDOR=pixys-prebuilts
+VENDOR=custom-prebuilts
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
